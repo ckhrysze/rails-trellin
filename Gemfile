@@ -28,8 +28,11 @@ group :development do
   gem 'sqlite3'
 end
 
-group :test do
+group :development, :test do
   gem 'rspec-rails'
+end
+
+group :test do
   # Pretty printed test output
   gem 'turn', '~> 0.8.3', :require => false
 end

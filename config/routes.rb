@@ -1,4 +1,6 @@
 Trellin::Application.routes.draw do
+  resources :abilities
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
