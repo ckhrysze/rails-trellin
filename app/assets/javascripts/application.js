@@ -7,3 +7,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$('#my-modal').modal({
+  keyboard: true
+});

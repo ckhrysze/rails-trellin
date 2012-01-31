@@ -31,11 +31,25 @@
           </ul>
 
           <ul class="nav secondary-nav">
-            <li><a href="#">Login</a></li>
+            <li><a data-controls-modal="modal-from-dom" data-keyboard="true">Login</a></li>
           </ul>
 
         </div>
       </div><!-- /topbar-inner -->
+    </div>
+
+    <div id="modal-from-dom" class="modal hide">
+      <div class="modal-header">
+        <a href="#" class="close">&times;</a>
+        <h3>Login</h3>
+      </div>
+      <div class="modal-body">
+        <p>
+	  <a href="/auth/dev">Dev</a>
+	  <a href="/auth/twitter">Twitter</a>
+	  <a href="/auth/google_oauth2">Google</a>
+	</p>
+      </div>
     </div>
 
     <%= yield %>

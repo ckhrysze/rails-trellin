@@ -1,6 +1,10 @@
 Trellin::Application.routes.draw do
 
+  resources :proses
+
   resources :abilities
+
+  match '/auth/:provider/callback', to: 'sessions#create'
 
   match 'index' => 'static#index'
   match 'history' => 'static#history'
