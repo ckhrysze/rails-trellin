@@ -4,6 +4,7 @@ gem 'rails', '3.1.3'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-google-oauth2'
+gem 'acts-as-taggable-on', '~> 2.2.2'
 
 group :production do
   # gems specifically for Heroku go here
