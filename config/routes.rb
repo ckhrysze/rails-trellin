@@ -9,6 +9,7 @@ Trellin::Application.routes.draw do
   resources :abilities
 
   match '/auth/:provider/callback', to: 'sessions#create'
+  match '/auth/failure', to: 'sessions#failure'
   match 'logout', to: 'sessions#logout'
 
   match 'index' => 'static#index'

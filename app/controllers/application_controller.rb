@@ -25,7 +25,7 @@ class ApplicationController < ActionController::Base
   end
 
   def gm?
-    false # @user.tagged_with('gm')
+    @user && @user.gm?
   end
 
   def current_user
