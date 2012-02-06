@@ -1,5 +1,6 @@
 class TrellinController < ApplicationController
 
+  skip_before_filter :require_gm
   before_filter :require_trellin
 
   def history
