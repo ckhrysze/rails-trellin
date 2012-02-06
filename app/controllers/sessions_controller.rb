@@ -5,7 +5,6 @@ class SessionsController < ApplicationController
 
   def create
     auth_hash = request.env['omniauth.auth']
-    logger.warn("auth hash: #{auth_hash}")
     uid = auth_hash[:uid]
     provider = auth_hash[:provider]
     logger.warn("uid: #{uid},  provider: #{provider}")
@@ -15,10 +14,12 @@ class SessionsController < ApplicationController
       logger.warn("credential is nil, creating a new one")
       user = User.create!
 
+      info_hash = auth_hash[:info]
+      logger.warn("info hash: #{info_hash}")
       credential = Credential.new(:uid => uid, :provider => provider)
-      credential.name = auth_hash[:name]
-      credential.email = auth_hash[:email]
-      credential.nickname = auth_hash[:nickname]
+      credential.name = info_hash[:name]
+      credential.email = info_hash[:email]
+      credential.nickname = info_hash[:nickname]
       credential.user = user
       credential.save!
     end
