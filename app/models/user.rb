@@ -12,4 +12,8 @@ class User < ActiveRecord::Base
     tags.detect { |tag| tag.name == 'gm' }
   end
 
+  def trellin?
+    tags.detect { |tag| tag.name == 'trellin' }
+  end
+
 end

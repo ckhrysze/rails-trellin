@@ -13,10 +13,10 @@ Trellin::Application.routes.draw do
   match 'logout', to: 'sessions#logout'
 
   match 'index' => 'static#index'
-  match 'history' => 'static#history'
-  match 'creation' => 'static#creation'
-  match 'time' => 'static#time'
-  match 'background' => 'static#background'
+  match 'history' => 'trellin#history'
+  match 'creation' => 'trellin#creation'
+  match 'time' => 'trellin#time'
+  match 'background' => 'trellin#background'
 
   root :to => 'static#index'
 
