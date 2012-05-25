@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120201035301) do
+ActiveRecord::Schema.define(:version => 20120413123634) do
 
   create_table "abilities", :force => true do |t|
     t.string   "desc"
@@ -53,6 +53,20 @@ ActiveRecord::Schema.define(:version => 20120201035301) do
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "tracks", :force => true do |t|
+    t.string   "name"
+    t.string   "desc"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "tier_1_id"
+    t.integer  "tier_2_id"
+    t.integer  "tier_3_id"
+    t.integer  "tier_4_id"
+    t.integer  "tier_5_id"
+    t.integer  "tier_6_id"
+    t.integer  "tier_7_id"
   end
 
   create_table "users", :force => true do |t|

@@ -1,5 +1,7 @@
 Trellin::Application.routes.draw do
 
+  resources :tracks
+
   resources :credentials
 
   resources :users
@@ -17,6 +19,7 @@ Trellin::Application.routes.draw do
   match 'creation' => 'trellin#creation'
   match 'time' => 'trellin#time'
   match 'background' => 'trellin#background'
+  match 'board' => 'trellin#board'
 
   root :to => 'static#index'
 

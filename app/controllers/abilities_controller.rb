@@ -44,7 +44,7 @@ class AbilitiesController < ApplicationController
 
     respond_to do |format|
       if @ability.save
-        format.html { redirect_to @ability, notice: 'Ability was successfully created.' }
+        format.html { redirect_to :abilities, notice: 'Ability was successfully created.' }
         format.json { render json: @ability, status: :created, location: @ability }
       else
         format.html { render action: "new" }

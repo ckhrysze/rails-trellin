@@ -19,6 +19,10 @@ class TrellinController < ApplicationController
     render_static_content( TextBlock.tagged_with('page').find_by_title('background') )
   end
 
+  def board
+    render :google_group
+  end
+
   def render_static_content(text_block)
     @content = text_block.nil? ? "No content found" : text_block.content
     render :static_page
