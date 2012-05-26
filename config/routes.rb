@@ -20,6 +20,7 @@ Trellin::Application.routes.draw do
   match 'time' => 'trellin#time'
   match 'background' => 'trellin#background'
   match 'board' => 'trellin#board'
+  match 'level_chart' => 'trellin#level_chart'
 
   root :to => 'static#index'
 

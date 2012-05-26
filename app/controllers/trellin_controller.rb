@@ -23,6 +23,10 @@ class TrellinController < ApplicationController
     render :google_group
   end
 
+  def level_chart
+    render :level_chart
+  end
+
   def render_static_content(text_block)
     @content = text_block.nil? ? "No content found" : text_block.content
     render :static_page
