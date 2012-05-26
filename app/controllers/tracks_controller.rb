@@ -25,6 +25,7 @@ class TracksController < ApplicationController
   # GET /tracks/new.json
   def new
     @track = Track.new
+    @abilities = Ability.all
 
     respond_to do |format|
       format.html # new.html.erb
