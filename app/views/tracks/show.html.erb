@@ -1,18 +1,19 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @track.name %>
-</p>
+  <p>
+    <b>Name:</b>
+    <%= @track.name %>
+  </p>
 
-<p>
-  <b>Desc:</b>
-  <%= @track.desc %>
-</p>
+  <p>
+    <b>Desc:</b>
+    <%= @track.desc %>
+  </p>
 
 <% @track.abilities.each do |ability| %>
-  <p><%= ability.name %></p>
+  <p class="ability"><span class="ability_name"><%= ability.name %>:</span>
+  <%= ability.desc %>
+  </p>
 <% end %>
-
-<%= link_to 'Edit', edit_track_path(@track) %> |
-<%= link_to 'Back', tracks_path %>
+</div>

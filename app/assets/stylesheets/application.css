@@ -15,3 +15,11 @@ body {
 .gm_text_area {
     width: 100%;
 }
+
+.ability {
+    padding-top: 15px;
+}
+
+.ability_name {
+    font-weight: bold;
+}
