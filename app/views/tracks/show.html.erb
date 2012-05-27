@@ -1,15 +1,9 @@
 <div class="container">
   <p id="notice"><%= notice %></p>
 
-  <p>
-    <b>Name:</b>
-    <%= @track.name %>
-  </p>
+  <p class="track_name"><%= @track.name %></p>
 
-  <p>
-    <b>Desc:</b>
-    <%= @track.desc %>
-  </p>
+  <p class="track_desc"><%= @track.desc %></p>
 
 <% @track.abilities.each do |ability| %>
   <p class="ability"><span class="ability_name"><%= ability.name %>:</span>

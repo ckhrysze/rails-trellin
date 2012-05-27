@@ -23,3 +23,8 @@ body {
 .ability_name {
     font-weight: bold;
 }
+
+.track_name {
+    font-size: x-large;
+    font-weight: bold;
+}
