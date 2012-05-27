@@ -1,7 +1,6 @@
 class TracksController < ApplicationController
 
   skip_before_filter :require_gm, :only => [:index, :show]
-  before_filter :require_trellin
 
   # GET /tracks
   # GET /tracks.json
