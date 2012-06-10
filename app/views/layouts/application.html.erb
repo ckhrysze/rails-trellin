@@ -19,16 +19,24 @@
 	    <% if @user.trellin? %>
               <ul class="nav">
 		<li><a href="/board">Message Board</a></li>
-		<li><a href="/creation">Character Creation</a></li>
-		<li><a href="/history">History</a></li>
-		<li><a href="/background">Background</a></li>
-		<li><a href="/time">Time</a></li>
 		<li class="dropdown">
 		  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-		    Resources
+		    The World
+		  </a>
+		  <ul class="dropdown-menu">
+		    <li><a href="/history">History</a></li>
+		    <li><a href="/background">Background</a></li>
+		    <li><a href="/time">Time</a></li>
+                    <li><a href="/organizations">Organizations</a></li>
+		  </ul>
+		</li>
+		<li class="dropdown">
+		  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+		    Mechanics
 		  </a>
 		  <ul class="dropdown-menu">
                     <li><a href="/level_chart">Advancement Chart</a></li>
+		    <li><a href="/creation">Character Creation</a></li>
                     <li><a href="/tracks">Tracks</a></li>
                     <li><a href="#">Classes</a></li>
                     <li><a href="#">Feats</a></li>

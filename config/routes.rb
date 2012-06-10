@@ -21,6 +21,9 @@ Trellin::Application.routes.draw do
   match 'background' => 'trellin#background'
   match 'board' => 'trellin#board'
   match 'level_chart' => 'trellin#level_chart'
+  match 'encounter' => 'trellin#encounter'
+  match 'organizations' => 'trellin#organizations'
+  match 'push' => 'trellin#push'
 
   root :to => 'static#index'
 

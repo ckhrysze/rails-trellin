@@ -20,6 +20,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'pusher'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -36,4 +37,5 @@ gem 'jquery-rails'
 group :development, :test do
   gem 'rspec-rails'
   gem 'sqlite3'
+  gem 'wirble'
 end

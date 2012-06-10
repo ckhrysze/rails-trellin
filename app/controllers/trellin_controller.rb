@@ -4,19 +4,23 @@ class TrellinController < ApplicationController
   before_filter :require_trellin
 
   def history
-    render_static_content( TextBlock.tagged_with('page').find_by_title('history') )
+    render_static_content('history')
   end
 
   def creation
-    render_static_content( TextBlock.tagged_with('page').find_by_title('creation') )
+    render_static_content('creation')
   end
 
   def time
-    render_static_content( TextBlock.tagged_with('page').find_by_title('time') )
+    render_static_content('time')
   end
 
   def background
-    render_static_content( TextBlock.tagged_with('page').find_by_title('background') )
+    render_static_content('background')
+  end
+
+  def organizations
+    render_static_content('organizations')
   end
 
   def board
@@ -27,7 +31,18 @@ class TrellinController < ApplicationController
     render :level_chart
   end
 
-  def render_static_content(text_block)
+  def encounter
+    render :encounter
+  end
+
+  def push
+    Pusher['test_channel'].trigger('greet', {
+        :greeting => "Hello there!"
+      })
+  end
+
+  def render_static_content(title)
+    text_block = TextBlock.tagged_with('page').find_by_title(title)
     @content = text_block.nil? ? "No content found" : text_block.content
     render :static_page
   end
